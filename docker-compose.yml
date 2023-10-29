@@ -1,0 +1,20 @@
+version: '3.5'
+
+
+services:
+  db:
+    image: postgres:15
+    volumes:
+      - ./Db/db.sql:/docker-entrypoint-initdb.d/db.sql
+    command: postgres -c log_min_messages=FATAL -c shared_buffers=512MB
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: rinha
+      POSTGRES_PASSWORD: rinha
+      POSTGRES_DB: rinha
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: "2GB"
