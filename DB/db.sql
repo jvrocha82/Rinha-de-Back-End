@@ -1,6 +1,10 @@
+
+
+
 CREATE TABLE people (
-    id UUID PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     apelido varchar(50) NOT NULL,
-    aniversario DATE NOT NULL
+    aniversario DATE NOT NULL,
+    stack varchar(255) not null
 )

@@ -7,6 +7,6 @@ const peopleRoutes = require("./src/Rotes/People")
 
 app.use('/', peopleRoutes)
 
-app.listen('3000',()=>{
-    console.log('App running on http://localhost:3000')
+app.listen(port,()=>{
+    console.log(`App running on http://localhost:${port}`)
 })
